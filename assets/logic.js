@@ -5,9 +5,10 @@
 // Navigate to next page once question is answered 
 // Feedback mechanism that alerts user if they are correct 
 
+var pageWrapper = document.querySelector('.start')
 var highscores = document.querySelector('.scores');
 var timer = document.querySelector('#time');
-var startButton = document.querySelector('.start');
+var startButton = document.querySelector('#start');
 var revealQuestion = document.querySelector('#questions');
 var questionTitle = document.querySelector('#question-title');
 var question = document.querySelector('choices'); 
@@ -23,3 +24,17 @@ timer.textContent = seconds
 startButton.addEventListener("click",  setTime)
 
 // Create function for timer
+function setTime () {
+    // removes page wrapper
+    pageWrapper.setAttribute("style", "display: none;")
+    
+    
+    
+    var Countdown = setInterval (function () {
+        seconds--;
+    if (seconds == 0) {
+        // clears countdown
+        clearInterval(Countdown); 
+    }
+    }, 1000) 
+}
