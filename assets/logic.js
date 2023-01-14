@@ -18,7 +18,7 @@ var initials = document.querySelector('#initials');
 var feedback = document.querySelector('#feedback');
 
 var seconds = 60
-timer.textContent = seconds
+
 
 // create event listener for start button
 startButton.addEventListener("click",  setTime)
@@ -27,10 +27,10 @@ startButton.addEventListener("click",  setTime)
 function setTime () {
     // removes page wrapper
     pageWrapper.setAttribute("style", "display: none;")
-    
-    
-    
+    // Questions appear 
+    revealQuestion.style.display = "block"
     var Countdown = setInterval (function () {
+        timer.textContent = seconds
         seconds--;
     if (seconds == 0) {
         // clears countdown
@@ -38,3 +38,6 @@ function setTime () {
     }
     }, 1000) 
 }
+
+// Add another event listener that once user clicks, next set of questions appear
+// In event listener remove old context of questions 
