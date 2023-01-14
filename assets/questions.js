@@ -12,8 +12,8 @@ var timer = document.querySelector('#time');
 var startButton = document.querySelector('.start');
 var revealQuestion = document.querySelector('#questions');
 var questionTitle = document.querySelector('#question-title');
-var question = document.querySelector('choices'); 
-var endScreen = document.querySelector('end-screen');
+var question = document.getElementById('choices'); 
+var endScreen = document.querySelector('#end-screen');
 var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials'); 
 var feedback = document.querySelector('#feedback');
@@ -39,6 +39,11 @@ Option3.textContent = "Elon Musk"
 Option4 = document.createElement("button"); 
 Option4.textContent = "John Carmack"
 
+// Appends questions to div with Id of 'choices' 
+question.appendChild(Option1);
+question.appendChild(Option2);
+question.appendChild(Option3);
+question.appendChild(Option4);
 
 
 
