@@ -18,3 +18,12 @@ var initials = document.querySelector('#initials');
 var feedback = document.querySelector('#feedback');
 
 console.log(finalScore);
+
+timer = 60
+
+// create event listener for start button
+startButton.addEventListener("click",  setTime)
+
+// Create function for timer
+
+
