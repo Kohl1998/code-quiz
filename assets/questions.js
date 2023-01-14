@@ -20,13 +20,25 @@ var feedback = document.querySelector('#feedback');
 
 console.log(finalScore);
 
-var seconds = 60
-timer.textContent = seconds
 
-// create event listener for start button
-startButton.addEventListener("click",  setTime)
+// append questions (1)
 
-// Create function for timer
+questionTitle.textContent = "Who created Javascript?"
+
+// append series of questions (2)
+
+Option1 = document.createElement("button"); 
+Option1.textContent = "Brendan Eich"
+
+Option2 = document.createElement("button"); 
+Option2.textContent = "Bill Gates"
+
+Option3 = document.createElement("button"); 
+Option3.textContent = "Elon Musk"
+
+Option4 = document.createElement("button"); 
+Option4.textContent = "John Carmack"
+
 
 
 
