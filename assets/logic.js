@@ -18,6 +18,7 @@ var initials = document.querySelector('#initials');
 var feedback = document.querySelector('#feedback');
 
 var seconds = 60
+timer.textContent = 60
 
 
 // create event listener for start button
@@ -34,7 +35,9 @@ function setTime () {
         seconds--;
     if (seconds == 0) {
         // clears countdown
-        clearInterval(Countdown); 
+        timer.textContent = 60
+        clearInterval(Countdown);
+        return; 
     }
     }, 1000) 
 }
