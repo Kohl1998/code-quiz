@@ -17,8 +17,10 @@ var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials'); 
 var feedback = document.querySelector('#feedback');
 
-var seconds = 60
-timer.textContent = 60
+var seconds = 60;
+timer.textContent = 60;
+
+var userScore = 0;
 
 
 // create event listener for start button
