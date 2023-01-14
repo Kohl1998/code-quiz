@@ -8,8 +8,9 @@
 // select all relevant elements
 
 var highscores = document.querySelector('.scores');
-var timer = document.querySelector('.timer');
+var timer = document.querySelector('#time');
 var startButton = document.querySelector('.start');
+var revealQuestion = document.querySelector('#questions');
 var questionTitle = document.querySelector('#question-title');
 var question = document.querySelector('choices'); 
 var endScreen = document.querySelector('end-screen');
@@ -19,11 +20,14 @@ var feedback = document.querySelector('#feedback');
 
 console.log(finalScore);
 
-timer = 60
+var seconds = 60
+timer.textContent = seconds
 
 // create event listener for start button
 startButton.addEventListener("click",  setTime)
 
 // Create function for timer
+
+
 
 
