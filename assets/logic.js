@@ -47,8 +47,14 @@ question.appendChild(btn);
 }
 
 function startTimer () {
-
+    var Countdown = setInterval (function () {
+        timer.textContent = seconds
+        seconds--;
+    if (seconds == 0) {
+        // clears countdown
+        clearInterval(Countdown); 
+    }
+    }, 1000) 
 }
 
-// add event listener to page wrapper to see if button ID is clicked
 
