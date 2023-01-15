@@ -16,9 +16,12 @@ var endScreen = document.querySelector('end-screen');
 var finalScore = document.querySelector('#final-score');
 var initials = document.querySelector('#initials'); 
 var feedback = document.querySelector('#feedback');
+var Currentquestion = "";
 
 var seconds = 60;
 timer.textContent = 60;
+
+var Questiontrack = 0;
 
 var userScore = 0;
 
@@ -31,14 +34,21 @@ showQuestions();
 startTimer ();
 });
 
+// added for loop to iterate over questions + answers
 
 function showQuestions () {
-
+revealQuestion.setAttribute("class", "");
+questionTitle.textContent = Questions[Questiontrack].question
+for (var i = 0; i < Questions.length; i++) {
+var btn = document.createElement('button');
+btn.innerHTML = Questions[Questiontrack].choices[i]
+question.appendChild(btn);
+} 
 }
 
 function startTimer () {
-    
+
 }
 
-// create function for question 
-// create function for timer
+// add event listener to page wrapper to see if button ID is clicked
+
