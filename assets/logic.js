@@ -22,6 +22,12 @@ timer.textContent = 60;
 
 var userScore = 0;
 
+Option1.addEventListener("click")
+Option2.addEventListener("click")
+Option3.addEventListener("click")
+Option4.addEventListener("click")
+
+
 
 // create event listener for start button
 startButton.addEventListener("click",  setTime)
