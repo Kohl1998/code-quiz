@@ -22,33 +22,23 @@ timer.textContent = 60;
 
 var userScore = 0;
 
-Option1.addEventListener("click")
-Option2.addEventListener("click")
-Option3.addEventListener("click")
-Option4.addEventListener("click")
-
-
 
 // create event listener for start button
-startButton.addEventListener("click",  setTime)
-
-// Create function for timer
-function setTime () {
+startButton.addEventListener("click",  function () {
     // removes page wrapper
-    pageWrapper.setAttribute("style", "display: none;")
-    // Questions appear 
-    revealQuestion.style.display = "block"
-    var Countdown = setInterval (function () {
-        timer.textContent = seconds
-        seconds--;
-    if (seconds == 0) {
-        // clears countdown
-        timer.textContent = 60
-        clearInterval(Countdown);
-        return; 
-    }
-    }, 1000) 
+pageWrapper.setAttribute("style", "display: none;");
+showQuestions();
+startTimer ();
+});
+
+
+function showQuestions () {
+
 }
 
-// Add another event listener that once user clicks, next set of questions appear
-// In event listener remove old context of questions 
+function startTimer () {
+    
+}
+
+// create function for question 
+// create function for timer
