@@ -21,34 +21,40 @@ var feedback = document.querySelector('#feedback');
 console.log(finalScore);
 
 
-var Questions =  [{
-    Question1: "who created Javascript?" , 
-    choices: {
-        A: "Brendan Eich",
-        B: "Bill Gates",
-        C: "Elon Musk",
-        D: "John Doe"
+var Questions =  [
+    {
+    question: "who created Javascript?" , 
+    choices: [
+         "Brendan Eich",
+         "Bill Gates",
+         "Elon Musk",
+         "John Doe"
+    ], 
+    Answer: 'A'
+}, 
+    {question: "How do you write an alert message?", 
+    choices: [
+         "alert();", 
+         "confirm();",
+         "prompt();",
+        "function(){};"
+    ],
+     Answer: 'A'
     }, 
-    Answer: 'A', 
-    Question2: "How do you write an alert message?", 
-    choices: {
-        A: "alert();", 
-        B: "confirm();",
-        C: "prompt();",
-        D: "function(){};",
-    }, Answer: 'A', 
-    Question3: "What does this sign mean ===", 
-    choices: {
-        A: "Stricly not equal too",
-        B: "Equal in value/type", 
-        C: "Greater than",
-        D: "Less than",
-    }, Answer: 'B', 
-    Question4: "How do you mean comments in HTML?",
-    choices: {
-        A: "//",
-        B: "/**/",
-        C: "<!--->",
-    }, Answer: 'C'
-} 
+    {
+    question: "What does this sign mean ===", 
+    choices: [
+         "Stricly not equal too",
+         "Equal in value/type", 
+         "Greater than",
+         "Less than",
+    ], Answer: 'B'}, 
+    {
+    question: "How do you mean comments in HTML?",
+    choices: [
+         "//",
+         "/**/",
+         "<!--->",
+    ],
+    Answer: 'C'}
 ]
