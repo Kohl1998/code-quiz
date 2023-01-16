@@ -62,6 +62,8 @@ function startTimer () {
     if (seconds == 0) {
         // clears countdown
         clearInterval(Countdown); 
+        timer.textContent = 60
+        alert("You have run out of time!")
     }
     }, 1000) 
     // runs at speed of 1 second
