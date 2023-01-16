@@ -30,7 +30,7 @@ var Questions =  [
          "Elon Musk",
          "John Doe"
     ], 
-    Answer: 'A'
+    Answer: "Brendan Eich"
 }, 
     {question: "How do you write an alert message?", 
     choices: [
@@ -39,7 +39,7 @@ var Questions =  [
          "prompt();",
         "function(){};"
     ],
-     Answer: 'A'
+     Answer: "alert();"
     }, 
     {
     question: "What does this sign mean ===", 
@@ -48,7 +48,7 @@ var Questions =  [
          "Equal in value/type", 
          "Greater than",
          "Less than",
-    ], Answer: 'B'}, 
+    ], Answer: "Equal in value/type"}, 
     {
     question: "How do you mean comments in HTML?",
     choices: [
@@ -56,5 +56,5 @@ var Questions =  [
          "/**/",
          "<!--->",
     ],
-    Answer: 'C'}
+    Answer: "<!--->"}
 ]
