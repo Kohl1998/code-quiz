@@ -42,18 +42,35 @@ function showQuestions () {
 revealQuestion.setAttribute("class", "");
 questionTitle.textContent = Questions[Questiontrack].question
 // increments questions, choices & answers
-for (var i = 0; i < Questions.length; i++) {
+for (var i = 0; i < Questions[Questiontrack].choices.length; i++) {
 var btn = document.createElement('button');
 // button content 
-btn.innerHTML = Questions[Questiontrack].choices[i]
+btn.textContent = Questions[Questiontrack].choices[i]
 question.appendChild(btn);
-btn.setAttribute("class", "option");
-if (btn.onclick == true) {
-    console.log("true")
-}
-} 
+btn.setAttribute("id", "options" + i)}
 }
 
+choices.addEventListener("click", function(event) {
+    var selected = event.target;
+    var Answer = selected.textContent === Questions[Questiontrack].Answer[0]; // issue here
+    if (Answer) {
+        userScore += 10;
+        NextQuestion();
+    } else if (!Answer) {
+        seconds -= 10;
+        NextQuestion();
+    }
+}) 
+
+function NextQuestion () {
+    // changes questions upon click
+    for (var i = 0; i < Questions[Questiontrack].choices.length; i++) {
+    var buttonChosen = document.querySelector('#options' + i);
+    buttonChosen.textContent = Questions[Questiontrack].choices[i]
+    }
+questionTitle.textContent = Questions[Questiontrack].question
+Questiontrack++; 
+}
 
 function startTimer () {
     var Countdown = setInterval (function () {
