@@ -34,17 +34,26 @@ showQuestions();
 startTimer ();
 });
 
+
 // added for loop to iterate over questions + answers
 
 function showQuestions () {
+    // reveals Q&A 
 revealQuestion.setAttribute("class", "");
 questionTitle.textContent = Questions[Questiontrack].question
+// increments questions, choices & answers
 for (var i = 0; i < Questions.length; i++) {
 var btn = document.createElement('button');
+// button content 
 btn.innerHTML = Questions[Questiontrack].choices[i]
 question.appendChild(btn);
+btn.setAttribute("class", "option");
+if (btn.onclick == true) {
+    console.log("true")
+}
 } 
 }
+
 
 function startTimer () {
     var Countdown = setInterval (function () {
@@ -55,6 +64,7 @@ function startTimer () {
         clearInterval(Countdown); 
     }
     }, 1000) 
+    // runs at speed of 1 second
 }
 
 
