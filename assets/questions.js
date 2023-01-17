@@ -50,7 +50,7 @@ var Questions =  [
          "Less than",
     ], Answer: "Equal in value/type"}, 
     {
-    question: "How do you mean comments in HTML?",
+    question: "How do you write comments in HTML?",
     choices: [
          "//",
          "/**/",
