@@ -52,12 +52,15 @@ btn.setAttribute("id", "options" + i)}
 
 choices.addEventListener("click", function(event) {
     var selected = event.target;
-    var Answer = selected.textContent === Questions[Questiontrack].Answer[0]; // issue here
+    // assigned variable to event within choices div
+    var Answer = selected.textContent === Questions[Questiontrack].Answer; 
     if (Answer) {
         userScore += 10;
+        Correct();
         NextQuestion();
     } else if (!Answer) {
         seconds -= 10;
+        Incorrect();
         NextQuestion();
     }
 }) 
@@ -68,7 +71,7 @@ function NextQuestion () {
     var buttonChosen = document.querySelector('#options' + i);
     buttonChosen.textContent = Questions[Questiontrack].choices[i]
     }
-questionTitle.textContent = Questions[Questiontrack].question
+questionTitle.textContent = Questions[Questiontrack].question;
 Questiontrack++; 
 }
 
@@ -86,4 +89,12 @@ function startTimer () {
     // runs at speed of 1 second
 }
 
+function Incorrect () {
+    feedback.textContent = "Wrong!"
+    feedback.setAttribute("class", "")
+}
 
+function Correct () {
+    feedback.textContent = "Correct!"
+    feedback.setAttribute("class", "")
+}
