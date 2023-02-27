@@ -34,7 +34,7 @@ I used 'Google Meet' - https://meet.google.com/
 
 ## License
 
-Please refer to the LICENSE in the repo.
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Features
 
